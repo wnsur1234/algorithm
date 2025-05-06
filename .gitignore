@@ -1,0 +1,15 @@
+# Java 클래스 파일
+*.class
+
+# 빌드 결과물
+/out/
+/target/
+/bin/
+
+# IntelliJ 설정
+.idea/
+*.iml
+
+# 기타 OS 별
+.DS_Store
+Thumbs.db
