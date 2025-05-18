@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46b9e37-e845-4740-bdbe-d07e7528452b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level1/ArrayAverage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MaxAndMin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ArrayAverage.executor": "Run",
+    "Application.MaxAndMin.executor": "Run",
     "Application.NumBackArray.executor": "Run",
     "Application.test2.executor": "Run",
     "Application.test3.executor": "Run",
@@ -55,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ArrayAverage">
+  <component name="RunManager" selected="Application.MaxAndMin">
     <configuration name="ArrayAverage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.proCode.level1.ArrayAverage" />
       <module name="SoloStudy" />
@@ -69,12 +70,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumBackArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.level1.NumBackArray" />
+    <configuration name="MaxAndMin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.MaxAndMin" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.level1.*" />
+          <option name="PATTERN" value="com.proCode.level2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.test2" />
+    <configuration name="NumBackArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level1.NumBackArray" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.*" />
+          <option name="PATTERN" value="com.proCode.level1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxAndMin" />
         <item itemvalue="Application.ArrayAverage" />
         <item itemvalue="Application.NumBackArray" />
         <item itemvalue="Application.test5" />
         <item itemvalue="Application.test3" />
-        <item itemvalue="Application.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +158,8 @@
       <workItem from="1746072769568" duration="1473000" />
       <workItem from="1746154691152" duration="4809000" />
       <workItem from="1746325490845" duration="1218000" />
-      <workItem from="1746572725492" duration="2414000" />
+      <workItem from="1746572725492" duration="4118000" />
+      <workItem from="1747609272148" duration="1798000" />
     </task>
     <servers />
   </component>
