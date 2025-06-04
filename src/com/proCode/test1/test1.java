@@ -1,7 +1,6 @@
-package com.proCode;
+package com.proCode.test1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 

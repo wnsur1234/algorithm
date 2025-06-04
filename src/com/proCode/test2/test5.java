@@ -1,4 +1,4 @@
-package com.proCode;
+package com.proCode.test2;
 
 import java.util.Arrays;
 import java.util.Scanner;

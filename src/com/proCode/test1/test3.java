@@ -1,6 +1,5 @@
-package com.proCode;
+package com.proCode.test1;
 
-import javax.swing.plaf.BorderUIResource;
 import java.util.Scanner;
 
 public class test3 {

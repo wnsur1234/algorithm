@@ -1,6 +1,5 @@
-package com.proCode;
+package com.proCode.test1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class test2 {

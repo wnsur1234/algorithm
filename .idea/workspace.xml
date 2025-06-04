@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46b9e37-e845-4740-bdbe-d07e7528452b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MaxAndMin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MakeMinimum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MoveMinLength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/parentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/test4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test2/test4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/test5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test2/test5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +48,11 @@
   "keyToString": {
     "Application.ArrayAverage.executor": "Run",
     "Application.MaxAndMin.executor": "Run",
+    "Application.MoveMinLength.executor": "Run",
     "Application.NumBackArray.executor": "Run",
+    "Application.Test1.executor": "Run",
+    "Application.Test3.executor": "Run",
+    "Application.parentheses.executor": "Run",
     "Application.test2.executor": "Run",
     "Application.test3.executor": "Run",
     "Application.test5.executor": "Run",
@@ -56,20 +70,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MaxAndMin">
-    <configuration name="ArrayAverage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.level1.ArrayAverage" />
-      <module name="SoloStudy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.proCode.level1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MoveMinLength">
     <configuration name="MaxAndMin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.proCode.level2.MaxAndMin" />
       <module name="SoloStudy" />
@@ -83,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumBackArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.level1.NumBackArray" />
+    <configuration name="MoveMinLength" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.MoveMinLength" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.level1.*" />
+          <option name="PATTERN" value="com.proCode.level2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.test3" />
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.test3.Test1" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.*" />
+          <option name="PATTERN" value="com.proCode.test3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +110,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.test5" />
+    <configuration name="Test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.test3.Test3" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.*" />
+          <option name="PATTERN" value="com.proCode.test3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parentheses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.parentheses" />
+      <module name="SoloStudy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.proCode.level2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MoveMinLength" />
+        <item itemvalue="Application.parentheses" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Test3" />
         <item itemvalue="Application.MaxAndMin" />
-        <item itemvalue="Application.ArrayAverage" />
-        <item itemvalue="Application.NumBackArray" />
-        <item itemvalue="Application.test5" />
-        <item itemvalue="Application.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +173,20 @@
       <workItem from="1746154691152" duration="4809000" />
       <workItem from="1746325490845" duration="1218000" />
       <workItem from="1746572725492" duration="4118000" />
-      <workItem from="1747609272148" duration="1798000" />
+      <workItem from="1747609272148" duration="3133000" />
+      <workItem from="1747697178081" duration="1843000" />
+      <workItem from="1747782844096" duration="602000" />
+      <workItem from="1747874318107" duration="201000" />
+      <workItem from="1747876200876" duration="132000" />
+      <workItem from="1747890299341" duration="5695000" />
+      <workItem from="1747969335889" duration="597000" />
+      <workItem from="1747981112478" duration="594000" />
+      <workItem from="1748072424913" duration="1299000" />
+      <workItem from="1748137207397" duration="1923000" />
+      <workItem from="1748220417196" duration="118000" />
+      <workItem from="1748299890998" duration="1664000" />
+      <workItem from="1748653666300" duration="5113000" />
+      <workItem from="1748996731802" duration="2412000" />
     </task>
     <servers />
   </component>
