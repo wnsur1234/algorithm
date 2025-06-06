@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46b9e37-e845-4740-bdbe-d07e7528452b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MakeMinimum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/MoveMinLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/parentheses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test3/Test3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/Carpet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test1/test3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/test4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test2/test4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/test5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/test2/test5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,35 +34,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ArrayAverage.executor": "Run",
-    "Application.MaxAndMin.executor": "Run",
-    "Application.MoveMinLength.executor": "Run",
-    "Application.NumBackArray.executor": "Run",
-    "Application.Test1.executor": "Run",
-    "Application.Test3.executor": "Run",
-    "Application.parentheses.executor": "Run",
-    "Application.test2.executor": "Run",
-    "Application.test3.executor": "Run",
-    "Application.test5.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/wnsur/Desktop/[BE6] 백엔드 파일/Backend_BE/SoloStudy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.quicklists",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ArrayAverage.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Carpet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MaxAndMin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MoveMinLength.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NumBackArray.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.parentheses.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test5.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/wnsur/Desktop/[BE6] 백엔드 파일/Backend_BE/SoloStudy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.quicklists&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.MoveMinLength">
-    <configuration name="MaxAndMin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.MaxAndMin" />
+}</component>
+  <component name="RunManager" selected="Application.Carpet">
+    <configuration name="Carpet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.Carpet" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
@@ -138,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Carpet" />
         <item itemvalue="Application.MoveMinLength" />
         <item itemvalue="Application.parentheses" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.Test3" />
-        <item itemvalue="Application.MaxAndMin" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +178,10 @@
       <workItem from="1748299890998" duration="1664000" />
       <workItem from="1748653666300" duration="5113000" />
       <workItem from="1748996731802" duration="2412000" />
+      <workItem from="1749001432960" duration="1319000" />
+      <workItem from="1749099204696" duration="623000" />
+      <workItem from="1749117356157" duration="4000" />
+      <workItem from="1749185652820" duration="1001000" />
     </task>
     <servers />
   </component>
