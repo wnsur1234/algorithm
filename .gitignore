@@ -13,3 +13,5 @@
 # 기타 OS 별
 .DS_Store
 Thumbs.db
+
+.idea/workspace.xml

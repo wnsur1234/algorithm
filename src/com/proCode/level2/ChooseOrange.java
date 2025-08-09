@@ -1,9 +1,6 @@
 package com.proCode.level2;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class ChooseOrange {
     public static void main(String[] args) {
@@ -20,40 +17,27 @@ public class ChooseOrange {
         for (int i = 0; i < orangesInt.length; i++) {
             orangesInt[i] = Integer.parseInt(oranges[i]);
         }
-        solution(k,orangesInt);
+        int answer = solution(k,orangesInt);
+        System.out.println(answer);
     }
 
-    private static void solution(int k , int[] orangesInt) {
+    private static int solution(int k , int[] orangesInt) {
+        if (k <= 0) return 0;
 
-        int sum = 0;
-        int cnt = 0;
-        HashMap<Integer,Integer> map = new HashMap<>();
-        for (int j : orangesInt) {
-            // 일단 orangesInt = 크기 배열을 돌면 서
-            // 각 인덱스에 해당 하는 값
-            // 비교를 orangesInt 와 같은 값이 있으면 으로 해야하나
-            // 1. put orangesInt(크기), o을 넣는다
-            // 2. 조건 orangesInt 존재한다면 +1
-            // 그게 아니라면 0을 넣는다
-            int currentCount = 0;
-            if (map.get(j) == j) {
-                currentCount = map.get(j);
-            }
-            map.put(j, currentCount + 1);
+        Map<Integer, Integer> freq = new HashMap<>();
+        for (int t : orangesInt) {
+            freq.put(t, freq.getOrDefault(t, 0) + 1);
         }
-        // 여기 까지가 귤 별 개수 저장 한거고
-        ArrayList<Integer> valueList = new ArrayList<>(map.values());
-        valueList.sort(Collections.reverseOrder());
-        for (int v : valueList) {
-            if (sum + v >= k) {
-                cnt++;
-                break;
-            } else {
-                sum += v;
-                cnt++;
-            }
-        }
-        System.out.println(cnt);
 
+        List<Integer> counts = new ArrayList<>(freq.values());
+        counts.sort(Collections.reverseOrder()); // 많이 나온 순
+
+        int picked = 0, kinds = 0;
+        for (int c : counts) {
+            picked += c;
+            kinds++;
+            if (picked >= k) break;
+        }
+        return kinds;
     }
 }

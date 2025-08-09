@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46b9e37-e845-4740-bdbe-d07e7528452b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/codeBattle/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/ChooseOrange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test4/Game369.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test4/MinFileMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test4/SaleApple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/test4/SameQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoloStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoloStudy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/level2/Boat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/level2/Boat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/proCode/level2/MaxAndMin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/level2/MaxAndMin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/proCode/level2/ChooseOrange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/proCode/level2/ChooseOrange.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +66,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Boat">
+  <component name="RunManager" selected="Application.ChooseOrange">
     <configuration name="Boat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.proCode.level2.Boat" />
       <module name="SoloStudy" />
@@ -144,9 +134,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChooseOrange" />
         <item itemvalue="Application.Boat" />
         <item itemvalue="Application.CodeBattle" />
-        <item itemvalue="Application.ChooseOrange" />
         <item itemvalue="Application.Game369" />
         <item itemvalue="Application.Carpet" />
       </list>
@@ -212,7 +202,7 @@
       <workItem from="1753084838545" duration="3161000" />
       <workItem from="1754024863124" duration="7024000" />
       <workItem from="1754113096297" duration="499000" />
-      <workItem from="1754706053972" duration="375000" />
+      <workItem from="1754706053972" duration="1158000" />
     </task>
     <servers />
   </component>
