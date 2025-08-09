@@ -8,6 +8,7 @@ public class Boat {
 
         Scanner sc = new Scanner(System.in);
         int limit = sc.nextInt();
+        sc.nextLine();
         String arr = sc.nextLine();
 
         String[] arrArr = arr.split(",");
@@ -18,6 +19,7 @@ public class Boat {
         }
 
         int result = solution(arrInt, limit);
+        System.out.println(result);
 
     }
 
