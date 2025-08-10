@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46b9e37-e845-4740-bdbe-d07e7528452b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/WordChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/proCode/level2/LeastMultiple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +41,7 @@
     "Application.ChooseOrange.executor": "Run",
     "Application.CodeBattle.executor": "Run",
     "Application.Game369.executor": "Run",
+    "Application.LeastMultiple.executor": "Run",
     "Application.MaxAndMin.executor": "Run",
     "Application.MoveMinLength.executor": "Run",
     "Application.NumBackArray.executor": "Run",
@@ -68,7 +69,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.WordChain">
+  <component name="RunManager" selected="Application.LeastMultiple">
     <configuration name="Boat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.proCode.level2.Boat" />
       <module name="SoloStudy" />
@@ -108,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game369" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.proCode.test4.Game369" />
+    <configuration name="LeastMultiple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.proCode.level2.LeastMultiple" />
       <module name="SoloStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.proCode.test4.*" />
+          <option name="PATTERN" value="com.proCode.level2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LeastMultiple" />
         <item itemvalue="Application.WordChain" />
         <item itemvalue="Application.ChooseOrange" />
         <item itemvalue="Application.Boat" />
         <item itemvalue="Application.CodeBattle" />
-        <item itemvalue="Application.Game369" />
       </list>
     </recent_temporary>
   </component>
@@ -205,6 +206,8 @@
       <workItem from="1754024863124" duration="7024000" />
       <workItem from="1754113096297" duration="499000" />
       <workItem from="1754706053972" duration="4966000" />
+      <workItem from="1754713490840" duration="35000" />
+      <workItem from="1754801707007" duration="2472000" />
     </task>
     <servers />
   </component>
