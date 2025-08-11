@@ -19,21 +19,24 @@ public class WordChain {
     }
 
     private static void solution(int n, String[] wordArray) {
-        String[] peopleWord = new String[n];
+        int[] answer = {0,0};
 
-        /*
-        그렇다면 단어를 비교하는데 있어서 우선 순위를 정하고 시작하면 좋을듯
-        비교 해야하는것 : 이전 사용 유무, 끝과 시작이 같은 알파벳인지
-        1. 끝과 시작 비교
-        2. 이전에 사용 단어 인지
-        * */
-
-        for (int i = 0; i < wordArray.length; i++) {
-            Set<String> used = new HashSet<>();
-            used.add(wordArray[i]);
-
-            peopleWord[0] = wordArray[i];
-            peopleWord[1] = wordArray[i+1];
+        // 사람 수 가 될꺼임
+        int q = wordArray.length/n;
+        int r = 0;
+        for (int i=0; i<wordArray.length; i++) {
+            if(wordArray[i].equals(wordArray[i+1])){
+                // 같아진 인덱스
+                r = i;
+            }else{
+                answer[0] = 0;
+                answer[1] = 0;
+            }
         }
+        // TODO
+        // answer[0]의 값을 구해야함
+        for(int i= 0; i <q;)
+            answer[1] = i;
+
     }
 }

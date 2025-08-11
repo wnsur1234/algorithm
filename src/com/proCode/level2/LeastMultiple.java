@@ -34,12 +34,13 @@ public class LeastMultiple {
         생각 1 : 각 수를 반복하면서 n을 무한으로 반복 모든 값이 같아 진다면 멈춤
         ex) 2 -> 1부터 n까지 의 곱 값
             6,8,14 -> 동일           -> 같아지는 값 stop
-        * */
-        while(true){
-            for(int i = 0; i < arr.length; i++){
-
-            }
-        }
-        return result1;
+//        * */
+//        while(true){
+//            for(int i = 0; i < arr.length; i++){
+//
+//
+//            }
+//        }
+        return 1;
     }
 }
