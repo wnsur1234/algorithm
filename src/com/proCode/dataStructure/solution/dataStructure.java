@@ -9,9 +9,34 @@ public class dataStructure {
     예: [1, 9, 3, 7, 5] → 9 + 7 = 16
     * */
     public static void main(String[] args) {
-        //array();
-        //list();
-        addString();
+        // array();
+        // list();
+        // addString();
+        BackToTheFuture();
+    }
+
+    private static void BackToTheFuture() {
+        // 페이지 방문기록 저장 -> 뒤로가기 -> 이전 페이지 돌아감
+        // 사실 실제 웹 브라우저에서는 캐시를 활용하여 정보를 기억하고 그 정보로 돌아가는걸로 알고 있음
+        // but 알고리즘 측면에서는 후입선출의 특징을 가지고 있는 stack으로 접근
+        // stack에 페이지1이라는 여기서는 문자열로 정보 받기
+        // 근데 문제 예시 보여준거에 "페이지1 → 페이지2 → 뒤로가기 → 페이지3" → [페이지1, 페이지3] 이렇게 되어있는데
+        // 뒤로가기 했으면 페이지 2가 되어야 하는거아니야? (아 뭔지 알겠다 페이지 2에서 뒤로가기가 된거구나
+        // 즉 페이지2를 pop한다고 생각
+        // stack의 특징 : 스택은 선형 구조로 중복을 허용하고 후입 선출의 특징을 가지고 있음
+        // 아마 길이 제한은 없는 걸로 알고 있고 stack은 Collection의 인터페이스가 아니다?
+        Scanner sc = new Scanner(System.in);
+        Stack<String> stack = new Stack<>();
+        // do while 을 통해 뒤로가기 이후 다음 페이지로 이동하는거까지
+        do {
+            String s  = sc.nextLine();
+            if(s.equals("뒤로가기")){
+                stack.pop();
+                break;
+            }
+            stack.push(s);
+        }while(true);
+        System.out.println(stack);
     }
 
     private static void addString() {
