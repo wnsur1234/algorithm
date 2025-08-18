@@ -9,8 +9,28 @@ public class dataStructure {
     예: [1, 9, 3, 7, 5] → 9 + 7 = 16
     * */
     public static void main(String[] args) {
-        array();
-        list();
+        //array();
+        //list();
+        addString();
+    }
+
+    private static void addString() {
+        Scanner sc = new Scanner(System.in);
+        // 문자열을 계속 입력 받아야함 -> 무한 loop
+        // 문자열을 계속 추가한다? = 리스트의 특징 중 1개 길이의 제한이 없고 중복을 허용한다.
+        // 그랬을 때 내 생각 1. 단순 리스트 추가 2. map을 생각했는데 생각해 보니 Map은 중복 허용 X
+        // 1 번 채택
+        List<String> list = new ArrayList<>();
+        while (true) {
+
+            String s = sc.nextLine();
+            if(s.equals("exit")){
+                break;
+            }
+            // 번외 : 여기서 인텔리제이가 sc. 만해도 hashnextLine 을 자동완성하려는데 이게 뭔지
+            list.add(s);
+        }
+        System.out.println(list);
     }
 
     private static void list() {
