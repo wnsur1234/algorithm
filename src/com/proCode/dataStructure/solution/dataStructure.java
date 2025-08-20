@@ -12,7 +12,56 @@ public class dataStructure {
         // array();
         // list();
         // addString();
-        BackToTheFuture();
+        // BackToTheFuture();
+        sameElement();
+    }
+
+    private static void sameElement() {
+        // 두 정수의 배열을 입력 받고 공통된 원소를 출력해라
+
+        // 여기 부터
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first element");
+        String first = sc.nextLine();
+        System.out.println("Enter the second element");
+        String second = sc.nextLine();
+
+        // 문자열 배열로 변환
+        String[] arr1 = first.split(",");
+        String[] arr2 = second.split(",");
+
+        // 문자열 배열의 길이 만큼 정수 배열 생성
+        int[] array1 = new int[arr1.length];
+        int[] array2 = new int[arr2.length];
+
+        // 변환
+        for(int i = 0; i < arr1.length; i++){
+            array1[i] = Integer.parseInt(arr1[i]);
+        }
+        for(int i = 0; i < arr2.length; i++){
+            array2[i] = Integer.parseInt(arr2[i]);
+        }
+        // 여기까지해서  입력을 받은 것을 정수의 배열로 만듬
+        // 생각 해보기
+        // 공통된 원소만 출력을 해야함
+        // stack을 활용해서 첫번째 배열 부터 push를 하고
+        // 만약 같은 원소가 들어오면 마지막 원소 pop 후 해당 인덱스 저장
+        // 근데 stack의 특징을 생각해보자 : 선형구조로 중복 허용 o, 후입 선출
+        Stack<Integer> stack = new Stack<>();
+        List<Integer> list = new ArrayList<>();
+        // 근데 생각해보니 satck에 push 를 해도 그 값을 비교를 어떻게 하지..?
+        // 공식문서에는 contains가 있는 거같은데
+        for (int j : array1) {
+            stack.push(j);
+        }
+        for(int i =0; i < array2.length; i++){
+            if(stack.contains(array2[i])){
+                list.add(array2[i]);
+            }
+        }
+        System.out.println(list);
+        // 일단 제미나이 답변 : Stack으로 했을 때 contain를 하면 내부에서 찾는데 시간 복잡도가 O(n*m) 이므로 배열이 켜질 경우 오래걸림
+        // set을 활용하여 contain을 하여 O(1)의 시간복잡도 활용
     }
 
     private static void BackToTheFuture() {
