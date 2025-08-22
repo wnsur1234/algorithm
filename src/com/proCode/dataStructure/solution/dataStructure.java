@@ -13,7 +13,7 @@ public class dataStructure {
         // list();
         // addString();
         // BackToTheFuture();
-        sameElement();
+        // sameElement(); 얜좀 풀이 길었다.
     }
 
     private static void sameElement() {
@@ -62,6 +62,19 @@ public class dataStructure {
         System.out.println(list);
         // 일단 제미나이 답변 : Stack으로 했을 때 contain를 하면 내부에서 찾는데 시간 복잡도가 O(n*m) 이므로 배열이 켜질 경우 오래걸림
         // set을 활용하여 contain을 하여 O(1)의 시간복잡도 활용
+        // -> 확인 결과 stack은 순서와 비교를 할 때 사용 내부의 값을 찾을 때는 set이 유용
+        // 이유 : set에는 hashcode가 존재 하기 때문에 값들에 접근이 빠름
+        Set<Integer> set = new HashSet<>();
+        List<Integer> list2 = new ArrayList<>();
+        for (int i = 0; i < arr1.length; i++) {
+            set.add(array1[i]);
+        }
+        for(int i = 0; i < arr2.length; i++){
+            if(set.contains(array2[i])){
+                list2.add(array2[i]);
+            }
+        }
+        System.out.println(list2);
     }
 
     private static void BackToTheFuture() {
