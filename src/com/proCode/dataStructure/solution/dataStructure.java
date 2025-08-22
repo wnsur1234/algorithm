@@ -14,6 +14,49 @@ public class dataStructure {
         // addString();
         // BackToTheFuture();
         // sameElement(); 얜좀 풀이 길었다.
+        checkedSpellinges();
+    }
+
+    private static void checkedSpellinges() {
+        // 문자열이 주어 졌을 때 각 알파벳이 몇 번 나왔나 확인
+        // ex) apple {a=1,p=2,l=1,e=1}
+
+        /*
+        일단 이건 순서와 흐름제어가 필요 하다 생각
+        흐름제어 중 값의 비교가 필요
+        -> 따라서 여기서 stack or queue를 사용하면 적절 하지 않을 까 생각
+        ex) 각 문자열 배열을 순회 하며 아 아닌가 결국 문자열 안을 순회 해야하는거면 이것 또한 set이 효율적인거 아닌가?
+        set을 통해서 해당 인덱스가 contains 를 하는지 똑같이 확인하고 존재 한다면 count+1 이런 식으로?
+        흠... 일단 해보자
+        */
+        Scanner sc = new Scanner(System.in);
+        String word = sc.nextLine();
+        String[] words = word.split("");
+        System.out.println(Arrays.toString(words));
+
+        // 각 스펠링에 해당하는 수를 저장하기 위함 -> key value가 좋을 듯
+        Map<String, Integer> map = new HashMap<>();
+        // 첫 번째 set으로 접근 해보자
+        Set<String> spellings = new HashSet<>();
+        int count = 1;
+
+        for(int i = 0; i<words.length; i++){
+            // 처음에 아무것도 없거나 중복되는게 없는 경우 그냥 set에 추가 map에도 해당 스펠링에대해 기본 count로 value 저장
+            if(spellings.isEmpty()|| !spellings.contains(words[i])){
+                spellings.add(words[i]);
+                map.put(words[i], count);
+            }else{
+                // 그게 아닌경우 즉, 중복이 되는 경우
+                // 일단 set에는 넣어야한다 생각했는데 일단 안넣기
+                // 그리고 count는 value 값이 므로 증가
+                count++;
+                // 이러면 해당 인덱스에 해당하는 단어가 중복되어 횟수가 증가 된걸로 저장
+                map.put(words[i],count);
+            }
+        }
+        for(int i =0; i<map.size(); i++){
+            System.out.println(words[i] + "=" + map.get(words[i]));
+        }
     }
 
     private static void sameElement() {
@@ -35,10 +78,10 @@ public class dataStructure {
         int[] array2 = new int[arr2.length];
 
         // 변환
-        for(int i = 0; i < arr1.length; i++){
+        for (int i = 0; i < arr1.length; i++) {
             array1[i] = Integer.parseInt(arr1[i]);
         }
-        for(int i = 0; i < arr2.length; i++){
+        for (int i = 0; i < arr2.length; i++) {
             array2[i] = Integer.parseInt(arr2[i]);
         }
         // 여기까지해서  입력을 받은 것을 정수의 배열로 만듬
@@ -54,8 +97,8 @@ public class dataStructure {
         for (int j : array1) {
             stack.push(j);
         }
-        for(int i =0; i < array2.length; i++){
-            if(stack.contains(array2[i])){
+        for (int i = 0; i < array2.length; i++) {
+            if (stack.contains(array2[i])) {
                 list.add(array2[i]);
             }
         }
@@ -69,8 +112,8 @@ public class dataStructure {
         for (int i = 0; i < arr1.length; i++) {
             set.add(array1[i]);
         }
-        for(int i = 0; i < arr2.length; i++){
-            if(set.contains(array2[i])){
+        for (int i = 0; i < arr2.length; i++) {
+            if (set.contains(array2[i])) {
                 list2.add(array2[i]);
             }
         }
@@ -91,13 +134,13 @@ public class dataStructure {
         Stack<String> stack = new Stack<>();
         // do while 을 통해 뒤로가기 이후 다음 페이지로 이동하는거까지
         do {
-            String s  = sc.nextLine();
-            if(s.equals("뒤로가기")){
+            String s = sc.nextLine();
+            if (s.equals("뒤로가기")) {
                 stack.pop();
                 break;
             }
             stack.push(s);
-        }while(true);
+        } while (true);
         System.out.println(stack);
     }
 
@@ -111,7 +154,7 @@ public class dataStructure {
         while (true) {
 
             String s = sc.nextLine();
-            if(s.equals("exit")){
+            if (s.equals("exit")) {
                 break;
             }
             // 번외 : 여기서 인텔리제이가 sc. 만해도 hashnextLine 을 자동완성하려는데 이게 뭔지
@@ -122,10 +165,10 @@ public class dataStructure {
 
     private static void list() {
         // 문제 : 중복을 제거한 리스트 반환
-        int[] ex = {1,2,2,3,4,4};
+        int[] ex = {1, 2, 2, 3, 4, 4};
         // 풀이 : set은 중복 허용 x 길이 제한 있음
         Set<Integer> set = new HashSet<>();
-        for(int i : ex){
+        for (int i : ex) {
             set.add(i);
         }
         // 다시 List 화
@@ -134,7 +177,7 @@ public class dataStructure {
     }
 
     private static void array() {
-        int[] arr = {1,9,3,7,5};
+        int[] arr = {1, 9, 3, 7, 5};
         // 내 생각 일단 배열의 특성 상 배열의 값을 찾기 위해서 O(n)의 시간 복잡도
         // 뭐 sort 랑 이런거? 있는거 같은데 이건 뭐였는지 다시 확인
         // -> 이거 Array.sort 임
@@ -144,17 +187,17 @@ public class dataStructure {
         int max = Integer.MIN_VALUE;
         int nextMax = Integer.MIN_VALUE;
         // 일단 최대값을 찾음
-        for (int i = 0; i<arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
                 nextMax = max;
                 max = arr[i];
-            }else if (nextMax < arr[i] && arr[i]!= max) {
+            } else if (nextMax < arr[i] && arr[i] != max) {
                 nextMax = arr[i];
             }
         }
         // 이후 최댓값 제거? 라고 생각하긴 하는데
         // 배열의 특성상 추가나 제거가 맨끝이나 처음이 아니면 힘듦
         // 해서 그냥 위에서 최대값을 찾고 next최대값을 찾음
-        System.out.println(max+nextMax);
+        System.out.println(max + nextMax);
     }
 }
