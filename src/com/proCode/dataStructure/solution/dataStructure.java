@@ -14,7 +14,7 @@ public class dataStructure {
         // addString();
         // BackToTheFuture();
         // sameElement(); 얜좀 풀이 길었다.
-        checkedSpellinges();
+        // checkedSpellinges();
     }
 
     private static void checkedSpellinges() {
@@ -35,28 +35,26 @@ public class dataStructure {
         System.out.println(Arrays.toString(words));
 
         // 각 스펠링에 해당하는 수를 저장하기 위함 -> key value가 좋을 듯
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new LinkedHashMap<>();
         // 첫 번째 set으로 접근 해보자
-        Set<String> spellings = new HashSet<>();
-        int count = 1;
-
         for(int i = 0; i<words.length; i++){
             // 처음에 아무것도 없거나 중복되는게 없는 경우 그냥 set에 추가 map에도 해당 스펠링에대해 기본 count로 value 저장
-            if(spellings.isEmpty()|| !spellings.contains(words[i])){
-                spellings.add(words[i]);
-                map.put(words[i], count);
+            if(map.containsKey(words[i])){
+                map.put(words[i], map.get(words[i])+1);
             }else{
-                // 그게 아닌경우 즉, 중복이 되는 경우
-                // 일단 set에는 넣어야한다 생각했는데 일단 안넣기
-                // 그리고 count는 value 값이 므로 증가
-                count++;
-                // 이러면 해당 인덱스에 해당하는 단어가 중복되어 횟수가 증가 된걸로 저장
-                map.put(words[i],count);
+                map.put(words[i],1);
             }
         }
-        for(int i =0; i<map.size(); i++){
-            System.out.println(words[i] + "=" + map.get(words[i]));
+        for(String i : map.keySet()){
+            System.out.println(i);
+            System.out.println(i + "=" + map.get(i));
         }
+        // 일단 위에 내가 생각한 풀이의 문제점
+        /*
+        1. set은 단순 중복 방지용으로 더 적합 하기 때문에 여기서는 불필요
+        2. map을 사용하는 방법은 좋았으나 활용 방법을 수정
+        3. count를 전역 변수로 설정함에 따라 증가가 되면 그 뒤에 값들도 증가하게 됨
+        * */
     }
 
     private static void sameElement() {
