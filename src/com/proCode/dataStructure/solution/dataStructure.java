@@ -14,10 +14,49 @@ public class dataStructure {
         // addString();
         // BackToTheFuture();
         // sameElement(); 얜좀 풀이 길었다.
-        // checkedSpellinges();
+        // checkedSpellings();
+        // NoDuplicateCount();
+        AverageStudentScore();
     }
 
-    private static void checkedSpellinges() {
+    private static void AverageStudentScore() {
+        // 입력 받은 학생 이름과 점수를 입력 받아 저장하고, 평균 점수를 구하시오.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("학생 이름을 적으시오 : ");
+        String studentName = sc.nextLine();
+        System.out.println("시험을 본 점수들을 적으시오 : ");
+        String studentGrade = sc.nextLine();
+        String[] GradeArray = studentGrade.split(",");
+        System.out.println(Arrays.toString(GradeArray));
+    }
+
+    private static void NoDuplicateCount() {
+        // 정수 배열에서 중복없이 고유한 숫자의 개수를 출력
+        // 일단 이건 중복없이 라는 키워드가 있으므로 set or Map을 사용해야 함
+        // 그냥 이건 size를 활용하면 되는거 아닌가?
+        Scanner sc = new Scanner(System.in);
+        String numArray = sc.nextLine();
+        String[] arr = numArray.split(",");
+        int[] array = new int[arr.length];
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            array[i] = Integer.parseInt(arr[i]);
+        }
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i = 0; i < array.length; i++){
+            map.put(array[i], i);
+        }
+        for(int i=0; i <map.size(); i++){
+            count++;
+        }
+        System.out.println(count);
+        // 개선 사항
+        // 1. count 는 사실 = map.size()와 동일 -> count를 증가 시키는 코드 불필요
+        // 2. set으로 했으면 더 간결 해짐
+
+    }
+
+    private static void checkedSpellings() {
         // 문자열이 주어 졌을 때 각 알파벳이 몇 번 나왔나 확인
         // ex) apple {a=1,p=2,l=1,e=1}
 
