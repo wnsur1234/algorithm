@@ -16,7 +16,7 @@ public class dataStructure {
         // sameElement(); 얜좀 풀이 길었다.
         // checkedSpellings();
         // NoDuplicateCount();
-        AverageStudentScore();
+        //AverageStudentScore();
     }
 
     private static void AverageStudentScore() {
@@ -25,9 +25,23 @@ public class dataStructure {
         System.out.println("학생 이름을 적으시오 : ");
         String studentName = sc.nextLine();
         System.out.println("시험을 본 점수들을 적으시오 : ");
-        String studentGrade = sc.nextLine();
-        String[] GradeArray = studentGrade.split(",");
-        System.out.println(Arrays.toString(GradeArray));
+        System.out.println("종료 시 \"exit\" 입력");
+        List<Integer> scoreList = new ArrayList<>();
+        while (true) {
+            String input = sc.nextLine();
+            if (input.equals("exit")) {
+                break;
+            }
+            scoreList.add(Integer.parseInt(input));
+        }
+        // 여기까지가 문제 조건부 완성 이후 평균점수 구하기
+        // 평균을 구하는 방법 -> 평균 = 전체 점수합/점수의 개수
+        double average = 0; // 평균점수 소수로 나올 수 있음
+        for (Integer integer : scoreList) {
+            average += integer;
+        }
+        average /= scoreList.size();
+        System.out.println(studentName+"의 평균 시험 점수는 : "+average+"점 입니다.");
     }
 
     private static void NoDuplicateCount() {
