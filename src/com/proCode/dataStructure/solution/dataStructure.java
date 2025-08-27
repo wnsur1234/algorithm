@@ -17,6 +17,28 @@ public class dataStructure {
         // checkedSpellings();
         // NoDuplicateCount();
         //AverageStudentScore();
+        sortArray();
+    }
+
+    private static void sortArray() {
+        // 사용자로부터 숫자를 입력 받아 저장한 뒤, 오름차순으로 정렬하여 출력하시오
+        // 흠.. 그냥 list를 활용해서 list의 특징 중복을 허용하고 순서를 보장하지 않는다 인데
+        // list에 add 해서 sort를 사용하면 되지 않을까? 일단 오름차순은 sort 인데 ... 아님 뭐 로직을 for문 이용해서 짜면 되긴하지만
+        // 사실 sort에 대해 잘 모르니까 빠르게 공식문서를 확인해 보자
+        // 내가 일단 확인해본결과 java.util에서 Arrays 에서도 사용이 가능하네
+        //Arrays arrays = new Arrays(); // 이렇게 하려니 안되네
+        ArrayList<Integer> list = new ArrayList<>(); // -> 내가아는건 ArrayList인데 Arrays랑은 다른건가?
+        while(true){
+            Scanner sc = new Scanner(System.in);
+
+            String s = sc.nextLine();
+            if(s.equals("exit")){
+                break;
+            }
+            list.add(Integer.parseInt(s));
+        }
+        System.out.println(list.sort()); // 근데 또 왜 여기서는 sort가 안되는거지.///?
+
     }
 
     private static void AverageStudentScore() {
