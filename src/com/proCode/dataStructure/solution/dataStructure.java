@@ -37,7 +37,9 @@ public class dataStructure {
             }
             list.add(Integer.parseInt(s));
         }
-        System.out.println(list.sort()); // 근데 또 왜 여기서는 sort가 안되는거지.///?
+        Collections.sort(list);
+        System.out.println(list); // 근데 또 왜 여기서는 sort가 안되는거지.///?
+        // 다시 찾아보니 sort 안에 int[] a 나 이런게 들어간다 그러면 단순 배열로 해야하는건가?
 
     }
 
