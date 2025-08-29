@@ -65,24 +65,46 @@ public class WordChain {
         // 갑자기 보이네?!! 바로 풀어보자
         int[] answer = new int[2];
         Set<String> set = new LinkedHashSet<>();
-        int bomb = 0;
-        int num = wordArray.length/n; // 각 사람마다 말한 차례 증가되는 수
-        for(int i=0; i<wordArray.length; i++) {
-            set.add(wordArray[i]);
-            if(set.contains(wordArray[i])) {
-                bomb = i;
-            }else if(i>1){
-                if(wordArray[i-1].charAt(-1) != wordArray[i].charAt(0) ) {
-                    bomb = i;
-                }
-            }else {
-                System.out.println(answer[0]);
+//        int bomb = 0;
+//        int num = wordArray.length/n; // 각 사람마다 말한 차례 증가되는 수
+//        for(int i=0; i<wordArray.length; i++) {
+//            if(set.isEmpty()|| !set.contains(wordArray[i])) {
+//                set.add(wordArray[i]);
+//            }
+//            if(set.contains(wordArray[i])) {
+//                bomb = i;
+//            }else if(i>0){
+//                if(wordArray[i-1].charAt(wordArray[i-1].length() - 1) != wordArray[i].charAt(0) ) {
+//                    bomb = i;
+//                }
+//            }else {
+//                System.out.println(answer[0]);
+//                break;
+//            }
+//        }
+//        n = bomb%num; //말한 번째 / 증가수 -> 몇번째 사람이 말했는지
+//        answer[0] = n+1; // 이렇게 하면 몇번째 사람이 말했는지는 됨
+//        answer[1] = (bomb/num)+1; // 이게  실제 말한 번째 수 인데 이게 결국 해당 번째 수 사람이 말한거의 차례가 되어야하는데
+//      위 풀이의 문제점 말하는참가자를 굳이 지정하지 않아도됨 어차피 규칙어긋나는 인덱스만 찾으면 답을 찾을 수 있기 때문
+
+        for(int i = 0; i< wordArray.length; i++){
+            String curr = wordArray[i];
+
+            if(!set.add(curr)){
+                answer[0] = (i%n)+1;
+                answer[1] = (i/n)+1;
                 break;
+            } if(i>0){
+                String prev = wordArray[i-1];
+                char prevLast = prev.charAt(prev.length()-1);
+                char currFirst = curr.charAt(0);
+                if(prevLast != currFirst){
+                    answer[0] = (i%n)+1;
+                    answer[1] = (i/n)+1;
+                    break;
+                }
             }
         }
-        n = bomb%num; //말한 번째 / 증가수 -> 몇번째 사람이 말했는지
-        answer[0] = n+1; // 이렇게 하면 몇번째 사람이 말했는지는 됨
-        answer[1] = (bomb/num)+1; // 이게  실제 말한 번째 수 인데 이게 결국 해당 번째 수 사람이 말한거의 차례가 되어야하는데
         System.out.println(Arrays.toString(answer));
     }
 }
