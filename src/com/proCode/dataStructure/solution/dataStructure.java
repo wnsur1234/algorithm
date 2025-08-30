@@ -16,8 +16,40 @@ public class dataStructure {
         // sameElement(); 얜좀 풀이 길었다.
         // checkedSpellings();
         // NoDuplicateCount();
-        //AverageStudentScore();
+        // AverageStudentScore();
         // sortArray();
+        // inputAndOutPut();
+    }
+
+    private static void inputAndOutPut() {
+        // 사용자로부터 문자열을 입력 받아 고유한 값만, 입력 순서대로 출력하시오.
+        // 일다 입력을 받은걸 순서대로 출력하는 과정이면
+        // 선형구조의 queue를 사용하면 될듯
+        // 왜냐 일단
+        // queue의 특성 : 선입선출의 구조이고 중복을 허용
+
+        // 근데 여기서 생각해 봐야할 점 Queue은 인터페이스인데
+        // 그렇다면 구현체가 있을꺼고 근데 구현체가 뭐가 있을까? 이거는 공식문서 찾아봐야할듯
+        // 근데 어차피 인터페이스여도 queue만 따로 사용가능한거 아닌가? 라는 생각
+        // Queue<String> strings = new Queue<>(); 일단 이렇게 queue만 써보려했는데 구현체 메소드들을 다 추가해야함
+        // 근데 그렇다면 여기서 또 하나의 의문점 그렇다면 지금 queue은 인터페이스기때문에 구현체가 필요한거라면
+        // 뭐 List나 Set,Map 이런것도 인터페이스인데 얘네도 얘네가 가지고 있는 구현체 메소드들 다 추가해야하는거아니야?
+        // 근데 지금까지 걔네들은 그냥 사용이 가능했잖아,,?
+
+        // 근데 또 지금 공식문서 찾아보면 Queue의 메소드들은 add,elemnet,offer,peek,poll,remove 밖에없는데?...???
+        // 구현클래스들은 AbstractQueue, ArrayBlockingQueue, ArrayDeque, ConcurrentLinkedDeque,
+        // ConcurrentLinkedQueue, DelayQueue, LinkedBlockingDeque, LinkedBlockingQueue, LinkedList,
+        // LinkedTransferQueue, PriorityBlockingQueue, PriorityQueue,SynchronousQueue
+        // 이렇게 있다는데 여기중에 하나를 써야하는거겠지?
+        Queue<String> queue = new LinkedList<>(); // 자동완서이 이렇게 추천해줌 (왜??)
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            String s = sc.nextLine();
+            if(s.equals("exit")) break;
+            queue.add(s);
+        }
+        // 오 나는 poll이나 뭐 elemnent 이런거 사용해야되는 줄 알았는데 그냥 queqe 자체를 출력하면 알아서 리스트 형식으로 출력하네
+        System.out.println(queue);
     }
 
     private static void sortArray() {
