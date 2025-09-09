@@ -203,6 +203,24 @@ private static int solution(int[] arr) {
 }
 
         * */
-        return num;
+
+        int lcm = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            lcm = lcm(lcm, arr[i]); // 앞의 결과랑 현재 수로 LCM
+        }
+        return lcm;
+    }
+
+    private static int lcm(int a, int b) {
+        return a / gcd(a, b) * b;
+    }
+
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int tmp = a % b;
+            a = b;
+            b = tmp;
+        }
+        return a;
     }
 }
