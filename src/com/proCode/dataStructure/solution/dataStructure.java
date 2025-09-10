@@ -19,7 +19,70 @@ public class dataStructure {
         // AverageStudentScore();
         // sortArray();
         // inputAndOutPut();
+        bestStudentScore();
     }
+
+    private static void bestStudentScore() {
+        // 학생 이름과 점수를 저장한 후, 가장 높은 점수를 받은 학생의 이름을 출력하시오.
+        // 솔직히 이전 평균 학생 점수 구하는거랑 똑같은 문제인줄 알았다.. ㅋㅋㅋ
+
+        // 근데 이것 또한 이미 존재하는 자료구조 내의 메서드로 접근을 하면
+        // Max 이런게 있지 않을까?
+        // 일단 학생 마다 점수를 저장해야하는 거니까 Map을 사용해야 하고
+        // Map에 max가 있나 공식문서 확인해 봐야지
+        // -> 결과 :
+        // Method Details Link icon
+        //size Link icon
+        //int size()
+        //Returns the number of key-value mappings in this map.
+        // If the map contains more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE
+        // 일단 Map에도 Max Value 뽑는게 있네
+        // 그러면 여기서 이 메서드 사용 풀이1, 이걸 몰랐다는 가정하에 풀이2 로 해봐야겠다.
+        Scanner sc = new Scanner(System.in);
+        Map<String,Integer> map = new HashMap<>();
+
+        while (true){
+            String studentName = sc.nextLine();
+            if(studentName.equals("exit")){
+                break;
+            }
+            int studentScore = sc.nextInt();
+            sc.nextLine(); // 이거는 nextInt 특성 상 엔터까지 입력 받기에 그걸 없애기 위함
+
+            map.put(studentName,studentScore);
+        }
+        System.out.println(map.entrySet());
+
+
+
+        // 메서드 활용 풀이
+//        solution1(map);
+//        // 단순 풀이
+//        solution2(map);
+    }
+
+//    private static void solution1(Map<String, Integer> map) {
+//        System.out.println("메서드 활용 풀이");
+//        int result = map.size(); // 이게 최대값 가져오는거 맞나????
+//        // 맞다 치고 키값을 가져오는건 어캐함?
+//        map.containsValue(result); // 이거는 boolean값 반환인데,...
+//        System.out.println(result);
+//    }
+//
+//    private static void solution2(Map<String, Integer> map) {
+//        System.out.println("그냥 논리 풀이");
+//        // 여기는 Map을 순회 하면서 value 값이 가장 클때의 key값인 Name을 출력하면 되는거 같은데
+//        // 결국 여기서도 key 값을 가져오는 방법이 없는데?
+//        String maxStudentName = null;
+//        int maxScore = 0;
+//        for(int i = 0; i < map.size(); i++){
+//            // 근데 그럼 여기 map.size()는 길이가 아닌건가?
+//            if(map.values>maxScore){
+//                maxScore = map.get(i);
+//                maxStudentName.replace(maxStudentName,i);
+//            }
+//        }
+//    }
 
     private static void inputAndOutPut() {
         // 사용자로부터 문자열을 입력 받아 고유한 값만, 입력 순서대로 출력하시오.
