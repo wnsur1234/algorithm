@@ -19,8 +19,81 @@ public class dataStructure {
         // AverageStudentScore();
         // sortArray();
         // inputAndOutPut();
-        bestStudentScore();
+        // bestStudentScore();
+        // productInputAndOutPut();
+        // productsolution1();
+        productsolution2();
     }
+
+    private static void productInputAndOutPut() {
+        // 1번 제품 이름과 가격을 입력받아 저장 후 입력 순서 대로 출력
+        // 2번 제품 이름 과 가격을 입력 받아 제품 이름 기준으로 오름차순 정렬 출력
+        // 걍 이거 두개 풀이 한번에 해서 하면 될듯
+
+        /*
+        자.. 생각 타임
+        일단 1번은 '순서대로'가 있었기 때문에 후입 선출인 stack이 필요 근데 결국 key값과 value값 모두가 필요한거 아니야?
+        그렇다고 map을 쓰기에는 map은 비선형 구조 이기 때문에 순서에 대한 게 없잖아 공식문서 확인 드가야겠다 map을 구현하는게 뭐가 있는 지
+        아니면 선형 구조 중에서 즉 Lifo 구조 중에서 키값과 value 값을 저장하는게 있나?
+        다음, 2번은 이름 대로 오름 차순이라면 이거는 Map 자체로 해도 되는거 아닌가?
+        어허,, 뭐가 있지 이것도 좀 헷갈리네
+        gpt야 정답을 알려주지 말고 힌트만줘 내가 뭘 어떤 걸 사용하면 좋을지 정도만?
+        왜냐면 그래야 내가 그게 뭔지 문서를 보던 직접 찾아볼테니까
+
+        아 찾아보니까 일단 1번에 대해서는 LinkedHashMap
+
+        2번에 대해서는 먼가 sortedMap? 인거같은데 -> 맞네 키에대한 전체 순서를 추가로 제공하는 거라네
+
+        2번
+        * */
+
+        //productsolution1();
+        //productsolution2();
+
+        // 그냥 이렇게 두개 같이 하면 풀이가 안돼서 따로 메서드 만듦
+
+    }
+
+    private static void productsolution1() {
+        System.out.println("1번");
+        Scanner sc = new Scanner(System.in);
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+        while(true) {
+            System.out.println("제품 이름 : ");
+            String product = sc.nextLine();
+            if(product.equals("exit")) {
+                break;
+            }
+            System.out.println("가격");
+            int price = sc.nextInt();
+            sc.nextLine();
+            map.put(product, price);
+        }
+        map.forEach((k,v)->{
+            System.out.println(k+v);
+        });
+    }
+
+    private static void productsolution2() {
+        System.out.println("2번");
+        Scanner sc = new Scanner(System.in);
+        SortedMap<String, Integer> map = new TreeMap<>();
+        while(true) {
+            System.out.println("제품 이름 : ");
+            String product = sc.nextLine();
+            if(product.equals("exit")) {
+                break;
+            }
+            System.out.println("가격");
+            int price = sc.nextInt();
+            sc.nextLine();
+            map.put(product, price);
+        }
+        map.forEach((k,v)->{
+            System.out.println(k+v);
+        });
+    }
+
 
     private static void bestStudentScore() {
         // 학생 이름과 점수를 저장한 후, 가장 높은 점수를 받은 학생의 이름을 출력하시오.
@@ -51,9 +124,21 @@ public class dataStructure {
 
             map.put(studentName,studentScore);
         }
-        System.out.println(map.entrySet());
 
+        String MaxStudentName = null;
+        int MaxStudentScore = Integer.MIN_VALUE;
 
+        for(Map.Entry<String,Integer> entry:map.entrySet()){
+            if(entry.getValue() > MaxStudentScore){
+                MaxStudentName = entry.getKey();
+                MaxStudentScore = entry.getValue();
+            }
+        }
+        if(MaxStudentName != null){
+            System.out.println(MaxStudentName);
+        }else{
+            System.out.println("입력된 학생이 없습니다.");
+        }
 
         // 메서드 활용 풀이
 //        solution1(map);
