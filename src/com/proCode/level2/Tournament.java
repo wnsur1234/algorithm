@@ -25,15 +25,14 @@ public class Tournament {
         Scanner sc = new Scanner(System.in);
         System.out.print("참가자 수를 입력하시오. : ");
         int N = sc.nextInt();
-        System.out.println();
         System.out.print("A의 번호를 입력하시오. : ");
         int A = sc.nextInt();
-        System.out.println();
         System.out.print("B의 번호를 입력하시오. : ");
         int B = sc.nextInt();
 
 
         int answer = solution(N,A,B);
+        System.out.println(answer);
     }
 
     /*
@@ -64,21 +63,21 @@ public class Tournament {
     다음대진으로 묶음들이 정해지는 번호의 공식을 찾아야함
     근데 그게 a+1/2, b+1/2 라는데 흠... 왜지?
 
+    1+x && 2+x  ==  1
+    2/2 3/2 몫을 말하는건가?
     * */
     private static int solution(int N, int A, int B) {
         int result = 0;
 
-        int[] list = new int[N];
-        list[0] = 0;
-
-        for (int i = 1; i < N+1; i++) {
-            list[i+1] = i;
-
-
+        while(true){
+            A = (A+1)/2;
+            B = (B+1)/2;
+            if(A==B){
+                result++;
+                break;
+            }
+            result++;
         }
-
-
-
         return result;
     }
 }
