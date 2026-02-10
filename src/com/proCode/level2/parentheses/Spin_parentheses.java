@@ -1,6 +1,8 @@
 package com.proCode.level2.parentheses;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Spin_parentheses {
@@ -25,26 +27,46 @@ public class Spin_parentheses {
         // 입력된 s문자열 -> 배열로 변환
         String[] split = s.split("");
 
-        int result = solution(split);
+        int QAResult = QA(split);
     }
 
-    private static int solution(String[] S) {
+    // 올바른 괄호 검증 알고리즘 => 시간복잡도 O(n^2)
+    private static int QA(String[] S) {
         int count = 0;
-        String[] bucket = {"(",")","{", "}", "[", "]"};
-
         // frist Step : 주어진 S에 대해서 올바른 괄호 S 케이스인지 구분하기
         // 근데 이 검증이 먼저인가? 라는 의문도 듬
         // 그냥 FIFO 형태로 돌면서 올바른 괄호 케이스가 없으면 0반환하면 되는거 아닌가?
         // 근데 또 차피 그 FIFO로 돌면서 판단하려면 올바른 괄호를 판단하는 알고리즘을 구해야함
-        for(String i : S){
-            for(String j : bucket){
-                if(i.equals(j)){
-                    // 좀더... 고민해보길
+        for(int i = 0; i < S.length; i++) {
+            for(int j = 0; j < S.length; j++) {
+                if(S[i].equals("(") && S[j].equals(")")) {
+                    count++;
+                }else if(S[i].equals("{") && S[j].equals("}")) {
+                    count++;
+                }else if(S[i].equals("[") && S[j].equals("]")) {
+                    count++;
+                }else{
+                    return count;
                 }
             }
         }
-
-
         return count;
+    }
+
+    private static int Queue(String[] S) {
+
+        // TODO : Queue에서 쓰는 삽입/삭제 문법 찾아보기 for JAVA
+        int result = 0;
+
+        Queue<String> q = new LinkedList<>();
+        q.add(S);
+
+        for(int i = 0; i < S.length; i++) {
+            q.push(q.shift());
+            if(QA(q.element()) != 0){
+                result ++;
+            }
+        }
+        return result;
     }
 }
