@@ -22,7 +22,37 @@ public class dataStructure {
         // bestStudentScore();
         // productInputAndOutPut();
         // productsolution1();
-        productsolution2();
+        // productsolution2();
+        parentheses();
+    }
+
+    private static void parentheses(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("괄호를 입력하세요.단,\"(,),{,},[,]\"만 입력가능합니다.");
+
+        Stack<Character> stack = new Stack<>();
+        String s = sc.nextLine();
+        int count = 0;
+
+        String[] arr = s.split("");
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equals("(")){
+                stack.push('(');
+            }else if(arr[i].equals("{")){
+                stack.push('{');
+            }else if(arr[i].equals("[")){
+                stack.push('[');
+            }else{
+                stack.pop();
+                if(stack.isEmpty()){
+                    System.out.println("false");
+                }
+            }
+        }
+        if(!stack.isEmpty()){
+            System.out.println("true");
+        }
     }
 
     private static void productInputAndOutPut() {

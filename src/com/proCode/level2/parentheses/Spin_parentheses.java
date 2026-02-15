@@ -53,20 +53,20 @@ public class Spin_parentheses {
         return count;
     }
 
-    private static int Queue(String[] S) {
-
-        // TODO : Queue에서 쓰는 삽입/삭제 문법 찾아보기 for JAVA
-        int result = 0;
-
-        Queue<String> q = new LinkedList<>();
-        q.add(S);
-
-        for(int i = 0; i < S.length; i++) {
-            q.push(q.shift());
-            if(QA(q.element()) != 0){
-                result ++;
-            }
-        }
-        return result;
-    }
+//    private static int Queue(String[] S) {
+//
+//        // TODO : Queue에서 쓰는 삽입/삭제 문법 찾아보기 for JAVA
+//        int result = 0;
+//
+//        Queue<String> q = new LinkedList<>();
+//        q.add(S);
+//
+//        for(int i = 0; i < S.length; i++) {
+//            q.push(q.shift());
+//            if(QA(q.element()) != 0){
+//                result ++;
+//            }
+//        }
+//        return result;
+//    }
 }
