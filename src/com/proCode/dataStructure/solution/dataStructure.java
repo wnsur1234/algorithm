@@ -30,29 +30,24 @@ public class dataStructure {
         Scanner sc = new Scanner(System.in);
         System.out.println("괄호를 입력하세요.단,\"(,),{,},[,]\"만 입력가능합니다.");
 
-        Stack<Character> stack = new Stack<>();
+        Stack<String> stack = new Stack<>();
         String s = sc.nextLine();
-        int count = 0;
-
         String[] arr = s.split("");
 
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i].equals("(")){
-                stack.push('(');
-            }else if(arr[i].equals("{")){
-                stack.push('{');
-            }else if(arr[i].equals("[")){
-                stack.push('[');
-            }else{
+        for (String key : arr) {
+            if (key.equals("(")) {
+                stack.push(key);
+            } else if (key.equals("{")) {
+                stack.push(key);
+            } else if (key.equals("[")) {
+                stack.push(key);
+            } else if (stack.isEmpty()) {
+                break;
+            } else {
                 stack.pop();
-                if(stack.isEmpty()){
-                    System.out.println("false");
-                }
             }
         }
-        if(!stack.isEmpty()){
-            System.out.println("true");
-        }
+        System.out.println(stack.isEmpty());
     }
 
     private static void productInputAndOutPut() {
