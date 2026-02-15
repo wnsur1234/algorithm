@@ -23,8 +23,8 @@ public class Spin_parentheses {
 
         // 입력된 s문자열 -> 배열로 변환
         String[] split = s.split("");
-
-        int QAResult = QA(split);
+        int result = Queue(split);
+        System.out.println(result);
     }
 
     // 올바른 괄호 검증 알고리즘 => 시간복잡도 O(n^2)
@@ -50,9 +50,15 @@ public class Spin_parentheses {
 
     private static int Queue(String[] S) {
         // TODO : Queue에서 쓰는 삽입/삭제 문법 찾아보기 for JAVA
+        int count =0;
         Queue<String[]> queue = new LinkedList<>();
-        queue.offer(S);
+        queue.add(S);
 
-        return 0;
+        for(int i = 0; i < S.length; i++) {
+            count += QA(queue.peek());
+            queue.stream().peek(strings -> strings[0] = strings[-1]);
+        }
+
+        return count;
     }
 }
