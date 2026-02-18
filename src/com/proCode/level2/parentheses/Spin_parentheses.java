@@ -23,42 +23,51 @@ public class Spin_parentheses {
 
         // 입력된 s문자열 -> 배열로 변환
         String[] split = s.split("");
-        int result = Queue(split);
+        System.out.println(Arrays.toString(split));
+
+        int result = QA(split);
         System.out.println(result);
+
     }
 
     // 올바른 괄호 검증 알고리즘 => 시간복잡도 O(n^2)
     private static int QA(String[] S) {
+
         Stack<String> stack = new Stack<>();
-        for (int i = 0; i < S.length; i++) {
-            if(S[i].equals("(")) {
-                stack.push(S[i]);
-            }else if(S[i].equals("{")) {
-                stack.push(S[i]);
-            }else if(S[i].equals("[")) {
-                stack.push(S[i]);
-            }else if(stack.isEmpty()) {
-                return 0;
-            }else{
-                stack.pop();
-            }
-        }
-        if(stack.isEmpty()) {
-            return 1;
-        }else return 0;
-    }
-
-    private static int Queue(String[] S) {
-        // TODO : Queue에서 쓰는 삽입/삭제 문법 찾아보기 for JAVA
-        int count =0;
-        Queue<String[]> queue = new LinkedList<>();
-        queue.add(S);
-
+        int count = 0;
         for(int i = 0; i < S.length; i++) {
-            count += QA(queue.peek());
-            queue.stream().peek(strings -> strings[0] = strings[-1]);
+            for(String st : S){
+                if(st.equals("(") || st.equals("{'") || st.equals("[")){
+                    stack.push(st);
+                }else if(st.equals(")") && stack.peek().equals("(")){ //가장 최근에 쌓인 것
+                    stack.pop();
+                }else if(st.equals("}") && stack.peek().equals("{")){
+                    stack.pop();
+                }else if(st.equals("]") && stack.peek().equals("[")){
+                    stack.pop();
+                }else{
+                    System.out.println("Error");
+                }
+            }
+            if(stack.isEmpty()){
+                count++;
+            }else{
+                stack.clear();
+            }
+            shift(S);
         }
-
         return count;
     }
+    private static void shift(String[] S) {
+       Queue<String> queue = new LinkedList<>();
+       for(String st : S) {
+           queue.offer(st);
+       }
+       String A = queue.poll();
+       queue.offer(A);
+       for(int i=0; i<queue.size(); i++){
+           S[i] = queue.poll();
+       }
+    }
+
 }
