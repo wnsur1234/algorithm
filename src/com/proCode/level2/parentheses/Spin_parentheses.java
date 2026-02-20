@@ -23,7 +23,6 @@ public class Spin_parentheses {
 
         // 입력된 s문자열 -> 배열로 변환
         String[] split = s.split("");
-        System.out.println(Arrays.toString(split));
 
         int result = QA(split);
         System.out.println(result);
@@ -32,14 +31,19 @@ public class Spin_parentheses {
 
     // 올바른 괄호 검증 알고리즘 => 시간복잡도 O(n^2)
     private static int QA(String[] S) {
-
-        Stack<String> stack = new Stack<>();
         int count = 0;
+
         for(int i = 0; i < S.length; i++) {
+            Stack<String> stack = new Stack<>();
+            boolean ok = true;
             for(String st : S){
-                if(st.equals("(") || st.equals("{'") || st.equals("[")){
+                if(st.equals("(") || st.equals("{") || st.equals("[")){
                     stack.push(st);
-                }else if(st.equals(")") && stack.peek().equals("(")){ //가장 최근에 쌓인 것
+                }else if(stack.isEmpty()){
+                    ok = false;
+                    break;
+                }
+                else if(st.equals(")") && stack.peek().equals("(")){ //가장 최근에 쌓인 것
                     stack.pop();
                 }else if(st.equals("}") && stack.peek().equals("{")){
                     stack.pop();
@@ -49,25 +53,21 @@ public class Spin_parentheses {
                     System.out.println("Error");
                 }
             }
-            if(stack.isEmpty()){
+            if(ok && stack.isEmpty()){
                 count++;
-            }else{
-                stack.clear();
             }
+
             shift(S);
         }
         return count;
     }
     private static void shift(String[] S) {
-       Queue<String> queue = new LinkedList<>();
-       for(String st : S) {
-           queue.offer(st);
-       }
-       String A = queue.poll();
-       queue.offer(A);
-       for(int i=0; i<queue.size(); i++){
-           S[i] = queue.poll();
-       }
+        Queue<String> queue = new LinkedList<>(Arrays.asList(S));
+        String A = queue.poll();
+        queue.offer(A);
+        for(int i = 0; i < S.length; i++) {
+            S[i] = queue.poll();
+        }
     }
 
 }
