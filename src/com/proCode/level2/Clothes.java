@@ -1,7 +1,7 @@
 package com.proCode.level2;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Clothes {
     public static void main(String[] args) {
@@ -17,16 +17,37 @@ public class Clothes {
 
         근데 지금 Hash 다루는 법을 잘 모르겠음 까먹었음
         * */
-        String[][] clothes = new String[][]{{"yellow_hat", "headgear"},{"blue_sunglasses", "eyewear"},{"green_turban", "headgear"}};
-        LinkedHashMap<String, String> clothesMap = new LinkedHashMap<>();
-        for(int i = 0; i < clothes.length; i++) {
-            String[] c = new String[2];
-            for(int j = 0; j < clothes.length; j++) {
-                c = clothes[i][j].split(",");
-                clothesMap.put(c[1], c[0]);
+        String[][] clothes = new String[][]{{"yellow_hat","headgear"},{"blue_sunglasses","eyewear"},{"green_turban","headgear"}};
+        Map<String, Integer> clothesMap = new HashMap<>();
+        int n = clothes.length;
+//        for(int i = 0; i < n; i++) {
+//            String[] c = new String[2];
+//            for(int j = 0; j < clothes.length; j++) {
+//                int count = 0;
+//
+//                // getOrDefault몰랐다는 가정 구현해봄
+//                if(clothesMap.containsKey(c[1])) {
+//                    count +=1;
+//                    clothesMap.put(c[1], count);
+//                }else{
+//                    count++;
+//                    clothesMap.put(c[1], count);
+//                }
+//                // clothesMap.put(c[1],1); //이렇게도 +1 되나? 증가하나? clothesMap.getOrDefault(c[1],0)+1을 몰랐을 때 경우를 구현하고싶음
+//            }
+//        }
+        for(int i = 0; i < n; i++){
+            String s = clothes[i][1];
+            if(clothesMap.containsKey(s)){
+                clothesMap.put(s, clothesMap.get(s)+1);
+            }else{
+                clothesMap.put(s, 1);
             }
         }
-        clothesMap.forEach( (key, value) -> { clothesMap.get(key)});
-
+        int result = 1;
+        for(int i : clothesMap.values()){
+            result *= (i+1);
+        }
+        System.out.println(result-1);
     }
 }
